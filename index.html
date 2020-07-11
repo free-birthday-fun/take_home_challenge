@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Birthday Fun Take Home</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Birthday Fun Take Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eacf935cf7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <button onclick="showSignUpForm()" id="btn-signup">Sign Up</button
+      ><button onclick="showLoginForm()" id="btn-login">Log In</button>
+      <form id="form-signup" method="POST" action="https://reqres.in/api/users">
+        <h1>Sign Up for Free</h1>
+        <div class="input-placeholder">
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="First Name"
+            required
+          />
+          <span>*</span>
+          <i class="far fa-address-book"></i>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Last Name"
+            required
+          />
+          <span>*</span>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <span>*</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Set A Password"
+            required
+          />
+          <span>*</span>
+          <i class="fas fa-lock"></i>
+        </div>
+        <button type="submit" class="btn-getstarted">Get Started</button>
+      </form>
+      <form id="form-login">
+        <h1>Welcome Back!</h1>
+        <div class="input-placeholder">
+          <input type="email" placeholder="Email Address" required />
+          <span>*</span>
+          <input type="password" placeholder="Set A Password" required />
+          <span>*</span>
+          <i class="fas fa-lock"></i>
+        </div>
+        <p><a href="#">Forgot Password?</a></p>
+        <button type="submit" class="btn-getstarted">Log In</button>
+      </form>
+    </div>
+    <script>
+      const signupForm = document.getElementById("form-signup");
+      const loginForm = document.getElementById("form-login");
+      const signupButton = document.getElementById("btn-signup");
+      const loginButton = document.getElementById("btn-login");
 
-</body>
+      function showSignUpForm() {
+        signupForm.style.display = "block";
+        loginForm.style.display = "none";
+        loginButton.style.backgroundColor = "rgb(67, 82, 90)";
+        loginButton.style.color = "rgb(192, 188, 185)";
+        signupButton.style.backgroundColor = "rgb(26, 177, 136)";
+        signupButton.style.color = "rgb(255, 255, 255)";
+      }
+
+      function showLoginForm() {
+        signupForm.style.display = "none";
+        loginForm.style.display = "block";
+        signupButton.style.backgroundColor = "rgb(67, 82, 90)";
+        signupButton.style.color = "rgb(192, 188, 185)";
+        loginButton.style.backgroundColor = "rgb(26, 177, 136)";
+        loginButton.style.color = "rgb(255, 255, 255)";
+      }
+    </script>
+  </body>
 </html>
