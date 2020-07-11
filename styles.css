@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(192, 188, 185);
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(21, 154, 119) !important;
+}
+
+h1 {
+  margin: 45px 0;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+input {
+  height: 35px;
+  padding: 10px;
+  border: 1px solid rgb(192, 188, 185);
+  margin-bottom: 40px;
+  background-color: inherit;
+  color: rgb(146, 153, 158);
+  font-family: inherit;
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+input:nth-of-type(1) {
+  margin-right: 15px;
+}
+
+p {
+  text-align: right;
+}
+
+p a,
+p a:visited {
+  text-decoration: none;
+  color: rgb(26, 177, 136);
+}
+
+p a:hover {
+  color: rgb(21, 154, 119);
+}
+
+span {
+  position: absolute;
+  color: rgb(26, 177, 136);
+  font-size: 16pt;
+}
+
+.btn-getstarted {
+  width: 100%;
+  height: 65px;
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.fa-address-book {
+  position: absolute;
+  top: 10px;
+  left: 230px;
+  color: rgb(146, 153, 158);
+}
+
+.form-container {
+  width: 600px;
+  max-height: 550px;
+  border-radius: 4px;
+  padding: 40px;
+  margin: calc((100vh - 550px) / 2) auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(36, 50, 61);
+  text-align: center;
+}
+
+.input-placeholder {
+  position: relative;
+}
+
+.input-placeholder input:valid + span {
+  display: none;
+}
+
+#btn-login {
+  width: 50%;
+  height: 50px;
+  background-color: rgb(67, 82, 90);
+  color: rgb(192, 188, 185);
+  font-size: 14pt;
+}
+
+#btn-signup {
+  width: 50%;
+  height: 50px;
+  font-size: 14pt;
+}
+
+#btn-signup,
+.btn-getstarted {
+  background-color: rgb(26, 177, 136);
+  color: rgb(255, 255, 255);
+}
+
+#form-login {
+  display: none;
+}
+
+#form-login input:last-of-type {
+  margin-bottom: 0;
+}
+
+#form-login span:nth-of-type(1) {
+  left: 156px;
+  top: 3px;
+}
+
+#form-login span:nth-of-type(2) {
+  left: 168px;
+  top: 78px;
+}
+
+#form-login .fa-lock {
+  position: absolute;
+  top: 85px;
+  left: 498px;
+  color: rgb(146, 153, 158);
+}
+
+#form-signup span:nth-of-type(1) {
+  left: 125px;
+  top: 3px;
+}
+
+#form-signup span:nth-of-type(2) {
+  left: 390px;
+  top: 3px;
+}
+
+#form-signup span:nth-of-type(3) {
+  left: 156px;
+  top: 78px;
+}
+
+#form-signup span:nth-of-type(4) {
+  left: 168px;
+  top: 153px;
+}
+
+#form-signup .fa-lock {
+  position: absolute;
+  top: 158px;
+  left: 498px;
+  color: rgb(146, 153, 158);
+}
+
+[type="text"] {
+  width: 250px;
+}
+
+[type="email"],
+[type="password"] {
+  width: 100%;
+}
+
+::placeholder {
+  color: rgb(146, 153, 158);
+}
